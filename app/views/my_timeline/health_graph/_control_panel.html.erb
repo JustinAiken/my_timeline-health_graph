@@ -1,0 +1,6 @@
+<h3> Health Graph Settings </h3>
+<% if @user.settings(:health_graph).user_token %>
+  <%= button_to "Scrape runs!", health_graph_scrape_path, method: :get, class: "btn btn-primary" %>
+<% else %>
+  <%= button_to "Connect to Runkeeper", new_health_graph_path, method: :get, class: "btn btn-primary" %>
+<% end %>
