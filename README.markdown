@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/JustinAiken/my_timeline-health_graph.png)](https://codeclimate.com/github/JustinAiken/my_timeline-health_graph)
+
 # My Timeline - Health Graph Plugin
 #### Health Graph Integration with My Timeline
 
