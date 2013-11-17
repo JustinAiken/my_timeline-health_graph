@@ -1,5 +1,5 @@
-# My Timeline - Health Graph
-#### RunKeeper Integration with Health Graph
+# My Timeline - Health Graph Plugin
+#### Health Graph Integration with My Timeline
 
 ### Requirements:
 - [My Timeline](https://github.com/JustinAiken/my_timeline)
@@ -7,9 +7,12 @@
 
 ### Usage:
 
-1. Add the gem to your Gemfile: `gem 'my_timeline-health_graph'` and `bundle install`
-2. Add this health_graph library to your Gemfile: `gem 'health_graph', git: 'git://github.com/jupp0r/health_graph.git'`
+1. Add this gem to your Gemfile:
+`gem 'my_timeline-health_graph'` and `bundle install`
+2. Add jupp0r's health_graph library to your Gemfile:
+`gem 'health_graph', git: 'git://github.com/jupp0r/health_graph.git'`
 3. Edit `config/initializers/my_timeline.rb` to include your API keys:
+
 ```ruby
 MyTimeline.setup do |config|
   ...
