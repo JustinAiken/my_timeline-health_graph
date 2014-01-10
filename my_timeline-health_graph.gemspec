@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
 
   s.files       = `git ls-files`.split("\n")
 
-  s.add_runtime_dependency "my_timeline"
+  s.add_runtime_dependency "my_timeline", '>= 0.0.4'
   s.add_runtime_dependency "health_graph"
 end

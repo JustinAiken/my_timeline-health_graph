@@ -4,7 +4,7 @@ module MyTimeline
       self.table_name = :my_timeline_health_graph_cardio_activities
       belongs_to :event, dependent: :destroy
 
-      attr_protected
+      attr_protected unless rails4?
     end
   end
 end
