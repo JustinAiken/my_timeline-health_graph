@@ -49,10 +49,10 @@ module MyTimeline
         orig_feed = @feed.dup
 
         #Loop through the pages to get all activies
-        # while @feed
+        while @feed
           @activities += @feed.items
-          # @feed = @feed.next_page
-        # end
+          @feed = @feed.next_page
+        end
 
         @activities = orig_feed.send :unpack_items, @activities.reverse
       end
