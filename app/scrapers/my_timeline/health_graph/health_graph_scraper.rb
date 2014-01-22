@@ -7,15 +7,14 @@ module MyTimeline
       attr_accessor :user, :activities, :health_graph_user, :count
 
       def initialize(user)
-        ::HealthGraph.configure do |config|
-          config.client_id                  = '0e5a8f038da04633bd539ec664037ea9' #user.settings(:health_graph).client_id
-          config.client_secret              = '838ad884eb644ebab93d09f302196244' #user.settings(:health_graph).client_secret
-          config.authorization_redirect_url = ""
-        end
-
         @user = user
 
-        @health_graph_user = ::HealthGraph::User.new(user.settings(:health_graph).user_token)
+        ::HealthGraph.configure do |config|
+          config.client_id                  = user.settings(:health_graph).client_id
+          config.client_secret              = user.settings(:health_graph).client_secret
+          config.authorization_redirect_url = ""
+        end
+        @health_graph_user = ::HealthGraph::User.new user.settings(:health_graph).user_token
       end
 
       def scrape(type = :cardio_activities)

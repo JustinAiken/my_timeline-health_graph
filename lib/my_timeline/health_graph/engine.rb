@@ -14,8 +14,7 @@ module MyTimeline
       end
 
       config.after_initialize do |app|
-        MyTimeline.config_object.key :health_graph, defaults: {user_token: nil}
-        MyTimeline.register_plugin :health_graph
+        MyTimeline.register_plugin :health_graph, defaults: {user_token: nil}
       end
 
       rake_tasks do
